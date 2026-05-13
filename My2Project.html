@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+made a responsive website for LP and mobile phone and please dont change LP layout lp k liye ye website shi bs phone k liye custimized kar do-iss website code ko proper laptop aur phone ke liye customized karo-<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -13,17 +13,13 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
+font-family:Arial;
 }
 
 body{
 background:#0f172a;
 color:white;
-overflow-x:hidden;
+scroll-behavior:smooth;
 }
 
 /* NAVBAR */
@@ -32,24 +28,24 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 8%;
+padding:15px 8%;
 background:#020617;
 position:sticky;
 top:0;
-z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,0.4);
+z-index:100;
 }
 
 nav h2{
 color:#38bdf8;
-font-size:28px;
 }
 
 nav ul{
 display:flex;
 list-style:none;
-gap:20px;
-flex-wrap:wrap;
+}
+
+nav ul li{
+margin-left:20px;
 }
 
 nav ul li a{
@@ -57,8 +53,6 @@ color:white;
 text-decoration:none;
 font-weight:bold;
 cursor:pointer;
-transition:0.3s;
-font-size:15px;
 }
 
 nav ul li a:hover{
@@ -68,153 +62,140 @@ color:#38bdf8;
 /* HERO */
 
 .hero{
-min-height:100vh;
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:100px 20px 60px;
-}
-
-.profile{
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid #38bdf8;
-margin-bottom:25px;
-box-shadow:0 0 20px rgba(56,189,248,0.5);
+padding:20px;
 }
 
 .hero h1{
-font-size:60px;
+font-size:55px;
 color:#38bdf8;
-margin-bottom:10px;
 }
 
 .hero p{
-font-size:24px;
-height:35px;
+margin-top:10px;
+font-size:20px;
+height:30px;
+}
+
+/* PROFILE PHOTO */
+
+.profile{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #38bdf8;
 margin-bottom:20px;
 }
 
-.hero-buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-justify-content:center;
-}
+/* BUTTON */
 
 .btn{
-padding:14px 32px;
+margin-top:20px;
+padding:12px 30px;
 border:none;
 background:#38bdf8;
 color:black;
 font-weight:bold;
-border-radius:8px;
+border-radius:6px;
 cursor:pointer;
-transition:0.3s;
-font-size:16px;
+margin-right:10px;
 }
 
 .btn:hover{
 background:#0ea5e9;
-transform:translateY(-3px);
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
-padding:100px 10%;
+min-height:100vh;
+padding:150px 20%;
 }
 
 .section-title{
-font-size:42px;
-margin-bottom:50px;
+font-size:40px;
+margin-bottom:40px;
 color:#38bdf8;
 text-align:center;
-}
-
-/* ABOUT */
-
-.about-text{
-max-width:850px;
-margin:auto;
-text-align:center;
-font-size:18px;
-line-height:1.8;
-color:#dbeafe;
 }
 
 /* SKILLS */
 
 .skills{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+grid-template-columns:repeat(4,1fr);
 gap:20px;
 }
 
 .skill{
 background:#1e293b;
-padding:25px;
+padding:20px;
 text-align:center;
-border-radius:12px;
+border-radius:10px;
 transition:0.3s;
-font-weight:bold;
-font-size:18px;
 }
 
 .skill:hover{
-transform:translateY(-8px);
+transform:scale(1.1);
 background:#38bdf8;
 color:black;
 }
 
-/* EDUCATION & EXPERIENCE */
+/* EDUCATION */
 
-.education,
-.experience{
-max-width:1000px;
+.education{
+max-width:900px;
 margin:auto;
-display:flex;
-flex-direction:column;
-gap:25px;
 }
 
-.edu-card,
+.edu-card{
+background:#1e293b;
+padding:25px;
+margin-bottom:20px;
+border-radius:10px;
+}
+
+.edu-card h3{
+color:#38bdf8;
+margin-bottom:5px;
+}
+
+.edu-card span{
+font-size:14px;
+color:#cbd5f5;
+}
+
+/* EXPERIENCE */
+
+.experience{
+max-width:900px;
+margin:auto;
+}
+
 .exp-card{
 background:#1e293b;
-padding:30px;
-border-radius:15px;
-transition:0.3s;
+padding:25px;
+margin-bottom:20px;
+border-radius:10px;
 }
 
-.edu-card:hover,
-.exp-card:hover{
-transform:translateY(-5px);
-}
-
-.edu-card h3,
 .exp-card h3{
 color:#38bdf8;
-margin-bottom:10px;
-font-size:24px;
+margin-bottom:5px;
 }
 
-.edu-card span,
 .exp-card span{
-font-size:15px;
-color:#cbd5e1;
+font-size:14px;
+color:#cbd5f5;
 }
 
-.edu-card p,
-.exp-card p{
-margin-top:12px;
-line-height:1.7;
-}
-
-/* PROJECTS */
+/* PROJECT SLIDER */
 
 .slider{
 position:relative;
@@ -225,43 +206,30 @@ overflow:hidden;
 
 .slides{
 display:flex;
-transition:0.5s ease;
+transition:0.5s;
 }
 
 .project{
 min-width:100%;
 background:#1e293b;
-padding:50px 30px;
-border-radius:15px;
+padding:30px;
+border-radius:10px;
 text-align:center;
 }
 
 .project h3{
 color:#38bdf8;
-font-size:28px;
-margin-bottom:15px;
-}
-
-.project p{
-line-height:1.8;
-font-size:17px;
-color:#e2e8f0;
+margin-bottom:10px;
 }
 
 .project a{
 display:inline-block;
-margin-top:20px;
-padding:12px 25px;
+margin-top:15px;
+padding:10px 20px;
 background:#38bdf8;
 color:black;
 text-decoration:none;
-font-weight:bold;
-border-radius:8px;
-transition:0.3s;
-}
-
-.project a:hover{
-background:#0ea5e9;
+border-radius:5px;
 }
 
 .slider-btn{
@@ -270,11 +238,8 @@ top:50%;
 transform:translateY(-50%);
 background:#38bdf8;
 border:none;
-padding:12px 18px;
-font-size:24px;
+padding:10px 15px;
 cursor:pointer;
-border-radius:50%;
-font-weight:bold;
 }
 
 .prev{
@@ -291,143 +256,18 @@ right:10px;
 text-align:center;
 }
 
-.contact p{
-margin-bottom:15px;
-font-size:18px;
-color:#e2e8f0;
-}
-
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:25px;
+padding:20px;
 background:#020617;
-margin-top:50px;
-font-size:15px;
-}
-
-/* RESPONSIVE DESIGN */
-
-@media(max-width:992px){
-
-.hero h1{
-font-size:48px;
-}
-
-.section-title{
-font-size:36px;
-}
-
-.profile{
-width:180px;
-height:180px;
-}
-
-}
-
-@media(max-width:768px){
-
-nav{
-flex-direction:column;
-gap:15px;
-padding:20px;
-}
-
-nav ul{
-justify-content:center;
-gap:15px;
-}
-
-.hero{
-padding-top:140px;
-}
-
-.hero h1{
-font-size:38px;
-}
-
-.hero p{
-font-size:20px;
-}
-
-.section-title{
-font-size:32px;
-}
-
-.project{
-padding:35px 20px;
-}
-
-.project h3{
-font-size:24px;
-}
-
-.slider-btn{
-padding:10px 14px;
-font-size:20px;
-}
-
-.btn{
-width:100%;
-max-width:250px;
-}
-
-}
-
-@media(max-width:480px){
-
-.hero h1{
-font-size:30px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.profile{
-width:150px;
-height:150px;
-}
-
-.section-title{
-font-size:28px;
-}
-
-.about-text{
-font-size:16px;
-}
-
-.skill{
-font-size:16px;
-padding:20px;
-}
-
-.edu-card,
-.exp-card{
-padding:20px;
-}
-
-.project h3{
-font-size:22px;
-}
-
-.project p{
-font-size:15px;
-}
-
-.contact p{
-font-size:16px;
-}
-
 }
 
 </style>
 </head>
 
 <body>
-
-<!-- NAVBAR -->
 
 <nav>
 
@@ -448,23 +288,21 @@ font-size:16px;
 
 <div class="hero">
 
-<img src="mousam.png" alt="Mousam Photo" class="profile">
+    <img src="mousam.png" alt="Mousam Photo" width="250" class="profile">
 
-<h1>Mousam Rahangdale</h1>
+    <h1>Mousam Rahangdale</h1>
 
-<p id="typing"></p>
+    <p id="typing"></p>
 
-<div class="hero-buttons">
+    <div>
+        <button class="btn" onclick="scrollSection('projects')">
+            View My Work
+        </button>
 
-<button class="btn" onclick="scrollSection('projects')">
-View My Work
-</button>
-
-<a href="Mmousam.pdf" download>
-<button class="btn">Download Resume</button>
-</a>
-
-</div>
+        <a href="Mmousam.pdf" download>
+            <button class="btn">Download Resume</button>
+        </a>
+    </div>
 
 </div>
 
@@ -474,10 +312,9 @@ View My Work
 
 <h2 class="section-title">About Me</h2>
 
-<p class="about-text">
+<p style="text-align:center;max-width:700px;margin:auto;">
 Aspiring Data Scientist with expertise in machine learning, NLP and predictive analytics.
 Experienced in building ML pipelines, transformer-based models and data-driven solutions.
-Passionate about solving real-world problems using AI and analytics.
 </p>
 
 </section>
@@ -513,26 +350,26 @@ Passionate about solving real-world problems using AI and analytics.
 
 <div class="edu-card">
 <h3>MCA (Master of Computer Applications)</h3>
-<span>UIT RGPV, Bhopal | 2023 – 2025</span>
-<p>CGPA : 8.3</p>
+<span>University Institute of Technology RGPV, Bhopal | 2023 – 2025</span>
+<p> <span>CGPA : 8.3</span></p>
 </div>
 
 <div class="edu-card">
 <h3>BCA (Bachelor of Computer Applications)</h3>
-<span>MCNUJC, Bhopal | 2020 – 2023</span>
-<p>CGPA : 8.9</p>
+<span>Makhanlal Chaturvedi National University of Journalism and Communication, Bhopal | 2020 – 2023</span>
+<p><span>CGPA : 8.9</span></p>
 </div>
 
 <div class="edu-card">
 <h3>12TH</h3>
-<span>Govt. Girls H.S. School Hatta, Balaghat | 2020</span>
-<p>Percentage : 86%</p>
+<span>Government Girls Higher Secondary School Hatta, Balaghat | 2020</span>
+<p><span>Percantage : 86</span></p>
 </div>
 
 <div class="edu-card">
 <h3>10TH</h3>
-<span>Govt. Girls H.S. School Hatta, Balaghat | 2018</span>
-<p>Percentage : 90%</p>
+<span>Government Girls Higher Secondary School Hatta, Balaghat | 2018</span>
+<p><span>Percantage : 90</span></p>
 </div>
 
 </div>
@@ -543,15 +380,15 @@ Passionate about solving real-world problems using AI and analytics.
 
 <section id="experience">
 
-<h2 class="section-title">Experience</h2>
+<h2 class="section-title">Work Experience</h2>
 
 <div class="experience">
 
 <div class="exp-card">
 <h3>Lecturer</h3>
-<span>Leelawati Institute of Technology | Aug 2025 – Feb 2026</span>
+<span>Leelawati Institute of Technology, Balaghat | Aug 2025 – Feb 2026</span>
 <p>
-Delivered lectures on programming and guided students in Python and Data Science projects.
+Delivered lectures on programming and data concepts and guided students in Python-based projects.
 </p>
 </div>
 
@@ -559,7 +396,7 @@ Delivered lectures on programming and guided students in Python and Data Science
 <h3>Data Analyst Intern</h3>
 <span>Anudip Foundation | Dec 2024 – Feb 2025</span>
 <p>
-Performed data analysis using Python, SQL and Excel and created dashboards for KPI tracking.
+Performed data analysis using Python, SQL and Excel and built dashboards to track KPIs.
 </p>
 </div>
 
@@ -579,32 +416,20 @@ Performed data analysis using Python, SQL and Excel and created dashboards for K
 
 <div class="project">
 <h3>ChatGPT Sentiment Analysis</h3>
-<p>
-NLP pipeline with TF-IDF + Logistic Regression and DistilBERT comparison.
-</p>
-<a href="https://github.com/mousamrahangdale/ChatGPT-Sentiment-Analysis" target="_blank">
-View Project
-</a>
+<p>NLP pipeline with TF-IDF + Logistic Regression and DistilBERT comparison.</p>
+<a href="https://github.com/mousamrahangdale/ChatGPT-Sentiment-Analysis" target="_blank">View Project</a>
 </div>
 
 <div class="project">
 <h3>WhatsApp Chat Analyzer</h3>
-<p>
-Analyzed 10k+ messages using NLP and built a visualization dashboard.
-</p>
-<a href="https://github.com/mousamrahangdale/Whatsapp_Chat_Analyzer" target="_blank">
-View Project
-</a>
+<p>Analyzed 10k+ messages using NLP and built visualization dashboard.</p>
+<a href="https://github.com/mousamrahangdale/Whatsapp_Chat_Analyzer" target="_blank">View Project</a>
 </div>
 
 <div class="project">
 <h3>HR Analytics</h3>
-<p>
-Employee attrition prediction using Machine Learning and Power BI dashboards.
-</p>
-<a href="https://github.com/mousamrahangdale/HR-Analytics-Project" target="_blank">
-View Project
-</a>
+<p>Employee attrition prediction using Random Forest and Power BI dashboards.</p>
+<a href="https://github.com/mousamrahangdale/HR-Analytics-Project" target="_blank">View Project</a>
 </div>
 
 </div>
@@ -628,17 +453,13 @@ View Project
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
-<p>© 2026 Mousam Rahangdale | All Rights Reserved</p>
+<p>© 2026 Mousam Rahangdale</p>
 
 </footer>
 
 <script>
-
-/* SMOOTH SCROLL */
 
 function scrollSection(id){
 document.getElementById(id).scrollIntoView({
@@ -646,42 +467,34 @@ behavior:"smooth"
 });
 }
 
-/* TYPING EFFECT */
+/* TYPING ANIMATION */
 
 const text = [
-"Data Scientist",
-"Machine Learning Enthusiast",
-"AI Developer",
-"Data Analyst"
+"Data Scientist"
 ]
 
-let count = 0
-let index = 0
-let current = ""
-let letter = ""
+let count=0
+let index=0
+let current=""
+let letter=""
 
 function type(){
 
-if(count === text.length){
-count = 0
+if(count===text.length){
+count=0
 }
 
-current = text[count]
-letter = current.slice(0, ++index)
+current=text[count]
+letter=current.slice(0,++index)
 
-document.getElementById("typing").textContent = letter
+document.getElementById("typing").textContent=letter
 
-if(letter.length === current.length){
-
+if(letter.length===current.length){
 count++
-index = 0
-
+index=0
 setTimeout(type,1500)
-
 }else{
-
 setTimeout(type,100)
-
 }
 
 }
@@ -690,37 +503,20 @@ type()
 
 /* PROJECT SLIDER */
 
-let slideIndex = 0
-const slides = document.getElementById("slides")
-const totalSlides = document.querySelectorAll(".project").length
+let slideIndex=0
+const slides=document.getElementById("slides")
 
 function nextSlide(){
-
 slideIndex++
-
-if(slideIndex >= totalSlides){
-slideIndex = 0
-}
-
-slides.style.transform = `translateX(-${slideIndex * 100}%)`
-
+if(slideIndex>2) slideIndex=0
+slides.style.transform="translateX(-"+slideIndex*100+"%)"
 }
 
 function prevSlide(){
-
 slideIndex--
-
-if(slideIndex < 0){
-slideIndex = totalSlides - 1
+if(slideIndex<0) slideIndex=2
+slides.style.transform="translateX(-"+slideIndex*100+"%)"
 }
-
-slides.style.transform = `translateX(-${slideIndex * 100}%)`
-
-}
-
-/* AUTO SLIDE */
-
-setInterval(nextSlide,4000)
 
 </script>
 
