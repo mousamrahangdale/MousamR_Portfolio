@@ -32,23 +32,12 @@ padding:15px 8%;
 background:#020617;
 position:sticky;
 top:0;
-z-index:1000;
+z-index:100;
 }
 
 nav h2{
 color:#38bdf8;
 }
-
-/* MENU BUTTON */
-
-.menu-btn{
-display:none;
-font-size:30px;
-cursor:pointer;
-color:white;
-}
-
-/* NAV LINKS */
 
 nav ul{
 display:flex;
@@ -64,7 +53,6 @@ color:white;
 text-decoration:none;
 font-weight:bold;
 cursor:pointer;
-transition:0.3s;
 }
 
 nav ul li a:hover{
@@ -80,7 +68,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:10px;
+padding:20px;
 }
 
 .hero h1{
@@ -117,7 +105,6 @@ font-weight:bold;
 border-radius:6px;
 cursor:pointer;
 margin-right:10px;
-transition:0.3s;
 }
 
 .btn:hover{
@@ -253,7 +240,6 @@ background:#38bdf8;
 border:none;
 padding:10px 15px;
 cursor:pointer;
-font-size:22px;
 }
 
 .prev{
@@ -278,187 +264,22 @@ padding:20px;
 background:#020617;
 }
 
-/* =========================
-   TABLET
-========================= */
-
-@media(max-width:1024px){
-
-section{
-padding:120px 10%;
-}
-
-.skills{
-grid-template-columns:repeat(2,1fr);
-}
-
-.hero h1{
-font-size:45px;
-}
-
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-/* NAVBAR */
-
-nav{
-padding:15px 5%;
-}
-
-/* MENU BUTTON */
-
-.menu-btn{
-display:block;
-}
-
-/* SIDE NAVBAR */
-
-nav ul{
-position:fixed;
-top:0;
-right:-260px;
-width:250px;
-height:100vh;
-background:#020617;
-flex-direction:column;
-align-items:center;
-padding-top:90px;
-transition:0.4s;
-z-index:999;
-}
-
-nav ul.active{
-right:0;
-}
-
-nav ul li{
-margin:20px 0;
-}
-
-/* HERO */
-
-.hero{
-padding:40px 20px;
-height:auto;
-min-height:100vh;
-}
-
-.hero h1{
-font-size:34px;
-line-height:1.2;
-}
-
-.hero p{
-font-size:18px;
-height:auto;
-}
-
-.profile{
-width:140px;
-height:140px;
-}
-
-/* BUTTONS */
-
-.btn{
-width:100%;
-max-width:250px;
-margin:10px auto;
-display:block;
-}
-
-/* SECTIONS */
-
-section{
-padding:100px 7%;
-min-height:auto;
-}
-
-.section-title{
-font-size:32px;
-margin-bottom:30px;
-}
-
-/* ABOUT */
-
-#about p{
-font-size:16px;
-line-height:1.7;
-}
-
-/* SKILLS */
-
-.skills{
-grid-template-columns:1fr;
-gap:15px;
-}
-
-/* PROJECT */
-
-.project{
-padding:25px 20px;
-}
-
-.slider-btn{
-padding:8px 12px;
-font-size:18px;
-}
-
-}
-
-/* SMALL MOBILE */
-
-@media(max-width:480px){
-
-.hero h1{
-font-size:28px;
-}
-
-.section-title{
-font-size:28px;
-}
-
-.profile{
-width:120px;
-height:120px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
 
 <h2>Mousam</h2>
 
-<div class="menu-btn" onclick="toggleMenu()">
-☰
-</div>
-
-<ul id="navLinks">
-
+<ul>
 <li><a onclick="scrollSection('about')">About</a></li>
-
 <li><a onclick="scrollSection('skills')">Skills</a></li>
-
 <li><a onclick="scrollSection('education')">Education</a></li>
-
 <li><a onclick="scrollSection('experience')">Experience</a></li>
-
 <li><a onclick="scrollSection('projects')">Projects</a></li>
-
 <li><a onclick="scrollSection('contact')">Contact</a></li>
-
 </ul>
 
 </nav>
@@ -467,23 +288,21 @@ height:120px;
 
 <div class="hero">
 
-<img src="mousam.png" alt="Mousam Photo" class="profile">
+    <img src="mousam.png" alt="Mousam Photo" width="250" class="profile">
 
-<h1>Mousam Rahangdale</h1>
+    <h1>Mousam Rahangdale</h1>
 
-<p id="typing"></p>
+    <p id="typing"></p>
 
-<div>
+    <div>
+        <button class="btn" onclick="scrollSection('projects')">
+            View My Work
+        </button>
 
-<button class="btn" onclick="scrollSection('projects')">
-View My Work
-</button>
-
-<a href="Mmousam.pdf" download>
-<button class="btn">Download Resume</button>
-</a>
-
-</div>
+        <a href="Mmousam.pdf" download>
+            <button class="btn">Download Resume</button>
+        </a>
+    </div>
 
 </div>
 
@@ -530,15 +349,27 @@ Experienced in building ML pipelines, transformer-based models and data-driven s
 <div class="education">
 
 <div class="edu-card">
-<h3>MCA</h3>
-<span>UIT RGPV, Bhopal | 2023 – 2025</span>
-<p><span>CGPA : 8.3</span></p>
+<h3>MCA (Master of Computer Applications)</h3>
+<span>University Institute of Technology RGPV, Bhopal | 2023 – 2025</span>
+<p> <span>CGPA : 8.3</span></p>
 </div>
 
 <div class="edu-card">
-<h3>BCA</h3>
-<span>MCU, Bhopal | 2020 – 2023</span>
+<h3>BCA (Bachelor of Computer Applications)</h3>
+<span>Makhanlal Chaturvedi National University of Journalism and Communication, Bhopal | 2020 – 2023</span>
 <p><span>CGPA : 8.9</span></p>
+</div>
+
+<div class="edu-card">
+<h3>12TH</h3>
+<span>Government Girls Higher Secondary School Hatta, Balaghat | 2020</span>
+<p><span>Percantage : 86</span></p>
+</div>
+
+<div class="edu-card">
+<h3>10TH</h3>
+<span>Government Girls Higher Secondary School Hatta, Balaghat | 2018</span>
+<p><span>Percantage : 90</span></p>
 </div>
 
 </div>
@@ -549,23 +380,23 @@ Experienced in building ML pipelines, transformer-based models and data-driven s
 
 <section id="experience">
 
-<h2 class="section-title">Experience</h2>
+<h2 class="section-title">Work Experience</h2>
 
 <div class="experience">
 
 <div class="exp-card">
 <h3>Lecturer</h3>
-<span>Leelawati Institute of Technology</span>
+<span>Leelawati Institute of Technology, Balaghat | Aug 2025 – Feb 2026</span>
 <p>
-Delivered lectures on programming and Python concepts.
+Delivered lectures on programming and data concepts and guided students in Python-based projects.
 </p>
 </div>
 
 <div class="exp-card">
 <h3>Data Analyst Intern</h3>
-<span>Anudip Foundation</span>
+<span>Anudip Foundation | Dec 2024 – Feb 2025</span>
 <p>
-Performed data analysis and dashboard development.
+Performed data analysis using Python, SQL and Excel and built dashboards to track KPIs.
 </p>
 </div>
 
@@ -585,26 +416,20 @@ Performed data analysis and dashboard development.
 
 <div class="project">
 <h3>ChatGPT Sentiment Analysis</h3>
-<p>NLP project using TF-IDF and DistilBERT.</p>
-<a href="https://github.com/mousamrahangdale/ChatGPT-Sentiment-Analysis" target="_blank">
-View Project
-</a>
+<p>NLP pipeline with TF-IDF + Logistic Regression and DistilBERT comparison.</p>
+<a href="https://github.com/mousamrahangdale/ChatGPT-Sentiment-Analysis" target="_blank">View Project</a>
 </div>
 
 <div class="project">
 <h3>WhatsApp Chat Analyzer</h3>
-<p>Message analytics using NLP.</p>
-<a href="https://github.com/mousamrahangdale/Whatsapp_Chat_Analyzer" target="_blank">
-View Project
-</a>
+<p>Analyzed 10k+ messages using NLP and built visualization dashboard.</p>
+<a href="https://github.com/mousamrahangdale/Whatsapp_Chat_Analyzer" target="_blank">View Project</a>
 </div>
 
 <div class="project">
 <h3>HR Analytics</h3>
-<p>Attrition prediction with dashboards.</p>
-<a href="https://github.com/mousamrahangdale/HR-Analytics-Project" target="_blank">
-View Project
-</a>
+<p>Employee attrition prediction using Random Forest and Power BI dashboards.</p>
+<a href="https://github.com/mousamrahangdale/HR-Analytics-Project" target="_blank">View Project</a>
 </div>
 
 </div>
@@ -623,14 +448,10 @@ View Project
 <h2 class="section-title">Contact</h2>
 
 <p>Email: mousamrahangdale2003@gmail.com</p>
-
 <p>GitHub: github.com/mousamrahangdale</p>
-
 <p>LinkedIn: linkedin.com/in/mousamrahangdale</p>
 
 </section>
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -640,31 +461,17 @@ View Project
 
 <script>
 
-/* SMOOTH SCROLL */
-
 function scrollSection(id){
-
 document.getElementById(id).scrollIntoView({
 behavior:"smooth"
-})
-
-/* CLOSE MENU AFTER CLICK */
-
-document.getElementById("navLinks").classList.remove("active")
-
+});
 }
 
-/* MOBILE MENU */
+/* TYPING ANIMATION */
 
-function toggleMenu(){
-
-document.getElementById("navLinks").classList.toggle("active")
-
-}
-
-/* TYPING EFFECT */
-
-const text = ["Data Scientist"]
+const text = [
+"Data Scientist"
+]
 
 let count=0
 let index=0
@@ -683,16 +490,11 @@ letter=current.slice(0,++index)
 document.getElementById("typing").textContent=letter
 
 if(letter.length===current.length){
-
 count++
 index=0
-
 setTimeout(type,1500)
-
 }else{
-
 setTimeout(type,100)
-
 }
 
 }
@@ -702,33 +504,18 @@ type()
 /* PROJECT SLIDER */
 
 let slideIndex=0
-
 const slides=document.getElementById("slides")
 
 function nextSlide(){
-
 slideIndex++
-
-if(slideIndex>2){
-slideIndex=0
-}
-
-slides.style.transform=
-"translateX(-"+slideIndex*100+"%)"
-
+if(slideIndex>2) slideIndex=0
+slides.style.transform="translateX(-"+slideIndex*100+"%)"
 }
 
 function prevSlide(){
-
 slideIndex--
-
-if(slideIndex<0){
-slideIndex=2
-}
-
-slides.style.transform=
-"translateX(-"+slideIndex*100+"%)"
-
+if(slideIndex<0) slideIndex=2
+slides.style.transform="translateX(-"+slideIndex*100+"%)"
 }
 
 </script>
