@@ -264,6 +264,206 @@ padding:20px;
 background:#020617;
 }
 
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+section{
+padding:120px 10%;
+}
+
+.skills{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero h1{
+font-size:45px;
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+/* NAVBAR */
+
+nav{
+flex-direction:column;
+padding:15px 5%;
+}
+
+nav h2{
+margin-bottom:10px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+}
+
+nav ul li{
+margin-left:0;
+}
+
+/* HERO */
+
+.hero{
+padding:40px 20px;
+height:auto;
+min-height:100vh;
+}
+
+.hero h1{
+font-size:34px;
+line-height:1.2;
+}
+
+.hero p{
+font-size:18px;
+height:auto;
+}
+
+.profile{
+width:140px;
+height:140px;
+}
+
+/* BUTTONS */
+
+.btn{
+width:100%;
+max-width:250px;
+margin:10px auto;
+display:block;
+}
+
+/* SECTIONS */
+
+section{
+padding:100px 7%;
+min-height:auto;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:30px;
+}
+
+/* ABOUT */
+
+#about p{
+font-size:16px;
+line-height:1.7;
+}
+
+/* SKILLS */
+
+.skills{
+grid-template-columns:1fr;
+gap:15px;
+}
+
+.skill{
+padding:18px;
+}
+
+/* EDUCATION */
+
+.edu-card{
+padding:20px;
+}
+
+.edu-card h3{
+font-size:20px;
+}
+
+.edu-card span{
+font-size:13px;
+}
+
+/* EXPERIENCE */
+
+.exp-card{
+padding:20px;
+}
+
+.exp-card h3{
+font-size:20px;
+}
+
+.exp-card p{
+font-size:15px;
+line-height:1.6;
+}
+
+/* PROJECTS */
+
+.project{
+padding:25px 20px;
+}
+
+.project h3{
+font-size:22px;
+}
+
+.project p{
+font-size:15px;
+line-height:1.6;
+}
+
+.slider-btn{
+padding:8px 12px;
+font-size:18px;
+}
+
+/* CONTACT */
+
+.contact p{
+font-size:15px;
+word-break:break-word;
+}
+
+/* FOOTER */
+
+footer{
+font-size:14px;
+padding:15px;
+}
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:480px){
+
+.hero h1{
+font-size:28px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.profile{
+width:120px;
+height:120px;
+}
+
+.project h3{
+font-size:20px;
+}
+
+}    
+    
+
 </style>
 </head>
 
